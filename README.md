@@ -1,133 +1,89 @@
-🧪 Oxford Nanopore Rapid Barcoding Protocol (SQK-RBK114.24 / SQK-RBK114.96)
-📋 Overview
-This protocol enables rapid barcoding of genomic DNA using the Rapid Barcoding Kit V14. The process involves:
+# ONT Rapid Barcoding Kit Protocol (SQK-RBK114.24 / SQK-RBK114.96)
 
-Tagmentation: Simultaneous fragmentation and barcoding of DNA using a transposase.
+This protocol outlines the steps for barcoding DNA samples using the Oxford Nanopore Rapid Barcoding Kit.
 
-Pooling and Cleanup: Combining barcoded samples and purifying the pooled library.
+## Materials Required
 
-Adapter Ligation: Attaching sequencing adapters to the purified library.
+- Rapid Barcoding Kit (SQK-RBK114.24 or SQK-RBK114.96)
+- Nuclease-free water
+- DNA samples (ideally 400 ng per sample in ≤7.5 µL)
+- Thermocycler or heat block
+- Magnetic beads (AMPure XP or equivalent)
+- Magnetic rack
+- Nuclease-free tubes
+- Pipettes and filtered tips
 
-Sequencing: Loading the prepared library onto a flow cell for sequencing.
+---
 
-🧰 Materials and Equipment
-Reagents and Kits
-Rapid Barcoding Kit V14: SQK-RBK114.24 or SQK-RBK114.96
+## Step-by-Step Protocol
 
-AMPure XP Beads (Beckman Coulter)
+### 1. Prepare DNA
 
-80% Ethanol (freshly prepared)
+- Dilute each DNA sample to 400 ng in a total volume of **7.5 µL** or less with nuclease-free water.
 
-Nuclease-Free Water
+---
 
-Qubit dsDNA HS Assay Kit (Invitrogen, Q32851)
+### 2. Barcoding Reaction
 
-Flow Cell Priming Kit V14 (EXP-FLP004)
+- To a nuclease-free tube, add:
 
-Rapid Adapter Auxiliary V14 (EXP-RAA114)
+  | Reagent       | Volume |
+  |---------------|--------|
+  | DNA sample    | 7.5 µL |
+  | RB (Rapid Barcode) | 2.5 µL |
 
-Sequencing Auxiliary Vials V14 (EXP-AUX003)
+- Mix gently by pipetting.
 
-Equipment
-MinION, GridION, or PromethION device
+---
 
-R10.4.1 Flow Cells (FLO-MIN114)
+### 3. Incubation
 
-Magnetic Rack
+- **Incubate at 30°C for 2 minutes.**
+- **Heat at 80°C for 2 minutes** to inactivate the transposase.
 
-Thermocycler or Heat Block
+---
 
-Pipettes and Tips
+### 4. Pooling Barcoded Samples
 
-Microcentrifuge Tubes
+- Combine **2 µL** from each barcoded sample into a single tube.
 
-🧬 Input DNA Requirements
-Quantity: 200 ng of high-quality genomic DNA per sample
+---
 
-Volume: Adjusted to 10 µL with Nuclease-Free Water
+### 5. Clean-Up with Magnetic Beads
 
-Quality: High molecular weight, A260/280 ratio ~1.8
+- Add an equal volume of magnetic beads to the pooled library.
+- Mix thoroughly by pipetting.
+- Incubate at room temperature for 5 minutes.
+- Place on magnetic rack and let stand until clear (~5 minutes).
+- Remove and discard the supernatant.
+- Wash twice with 200 µL of 70% ethanol.
+- Air dry the beads (~2 minutes).
+- Elute in 10 µL of nuclease-free water.
 
-🧪 Step-by-Step Protocol
-1. Barcode Attachment (Tagmentation)
-For each sample:
+---
 
-In a PCR tube, combine:
+### 6. Proceed to Adapter Ligation or Sequencing
 
-10 µL genomic DNA (200 ng)
+Follow the remaining steps in the ONT protocol to ligate adapters and load onto the flow cell.
 
-2.5 µL Barcode (RBxx)
+---
 
-2.5 µL Fragmentation Mix (FRA)
+## Notes
 
-Mix gently by pipetting.
+- Work on ice when possible.
+- Avoid over-drying the beads.
+- Store any unused barcodes at -20°C.
 
-Incubate at 30°C for 1 minute.
+---
 
-Immediately place on ice.
+## References
 
-Note: The transposase simultaneously fragments the DNA and attaches barcoded tags.
+- Oxford Nanopore Technologies SQK-RBK114.24 protocol [https://nanoporetech.com/]
 
-2. Pooling and Cleanup
-Pool 2 µL from each barcoded sample into a single tube.
 
-Add 1.8x volume of AMPure XP beads to the pooled sample.
 
-Incubate at room temperature for 5 minutes.
 
-Place the tube on a magnetic rack until the solution clears.
 
-Remove and discard the supernatant.
 
-Wash the beads twice with 200 µL of freshly prepared 80% ethanol.
 
-Air-dry the beads for 5 minutes.
 
-Elute the DNA in 10 µL of Nuclease-Free Water.
-
-3. Adapter Ligation
-To the 10 µL of eluted DNA, add:
-
-1 µL Rapid Adapter (RAP)
-
-Mix gently by pipetting.
-
-Incubate at room temperature for 5 minutes.
-
-Note: Proceed to sequencing promptly after adapter ligation.
-
-4. Flow Cell Priming and Library Loading
-Prime the flow cell using the Flow Cell Priming Kit V14 (EXP-FLP004) as per manufacturer's instructions.
-
-Prepare the sequencing mix:
-
-37.5 µL Sequencing Buffer (SQB)
-
-25.5 µL Loading Beads (LB)
-
-12 µL Adapter-ligated library
-
-Mix the sequencing mix gently by pipetting.
-
-Load 75 µL of the sequencing mix onto the flow cell via the SpotON sample port.
-
-🖥️ Sequencing Setup
-Software: Use MinKNOW for sequencing control.
-
-Kit Selection: Choose the appropriate kit (SQK-RBK114.24 or SQK-RBK114.96) in the software.
-
-Basecalling: Enable live basecalling if desired.
-
-Demultiplexing: Utilize MinKNOW, Guppy, or EPI2ME for barcode demultiplexing.
-
-📝 Notes and Tips
-DNA Quality: High-quality, high molecular weight DNA is crucial for optimal results.
-
-Temperature Control: Maintain reagents and samples on ice when not in use.
-
-Bead Cleanup: Ensure complete removal of ethanol during bead washing to prevent interference with downstream steps.
-
-Sequencing Timing: Begin sequencing promptly after library preparation to ensure library integrity.
-
-📚 References
-Rapid Sequencing gDNA Barcoding Protocol – Oxford Nanopore Technologies
