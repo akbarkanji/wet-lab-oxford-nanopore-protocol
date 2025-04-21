@@ -42,11 +42,11 @@ Place on ice
 3️⃣ Pooling and Cleanup
 Combine 11.5 µL from each barcoded sample into a clean tube
 
-Add 1X volume of AMPure magnetic beads (11.5ul) in a MIDI 96 well plate
+Add 1X volume of AMPure magnetic beads (11.5ul) in a MIDI 96-well plate
 
-Incubate 5 min at room temp
+Incubate 5 min at room temperature
 
-Place on magnetic rack, wait for beads to pellet
+Place on magnetic plate, wait for beads to pellet
 
 Wash twice with 200 µL of 80% ethanol
 
@@ -56,7 +56,7 @@ Elute in 15 µL Elution Buffer (EB)
 
 Incubate for 10 minutes at Room temperature
 
-Pellet the beads on a magnet until the eluate is cler and colorless, for at least 1 minute
+Pellet the beads on a magnetic plate until the eluate is clear and colorless, for at least 1 minute
 
 Transfer 12ul of the eluate to a 1.5ml Eppendorf tube
 
